@@ -1,0 +1,12 @@
+.div4 {
+  grid-area: 2 / 2 / 6 / 5;
+  background-color: rgba(6, 6, 24, 0.514);
+  border: 2px solid rgb(200, 14, 14);
+  color: yellow;
+  border-radius: 10px;
+  overflow: auto;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}

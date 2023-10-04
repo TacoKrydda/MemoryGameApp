@@ -31,6 +31,22 @@ namespace MemoryGame.Services
             }
         }
 
+        public List<int> GenerateRandomNumberList()
+        {
+            List<int> availableNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            List<int> randomNumbers = new List<int>(availableNumbers.Count);
+            Random random = new Random();
+
+            while (availableNumbers.Count > 0)
+            {
+                int randomIndex = random.Next(availableNumbers.Count);
+                randomNumbers.Add(availableNumbers[randomIndex]);
+                availableNumbers.RemoveAt(randomIndex);
+            }
+
+            return randomNumbers;
+        }
+
         public async Task<IEnumerable<HighScore>> GetAllHighScoresAsync()
         {
             return await _highScoreRepository.GetAllHighScoresAsync();
@@ -58,5 +74,6 @@ namespace MemoryGame.Services
         {
             await _highScoreRepository.UpdateHighScoreAsync(highScore);
         }
+
     }
 }

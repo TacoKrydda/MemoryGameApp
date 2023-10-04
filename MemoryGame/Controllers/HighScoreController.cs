@@ -51,5 +51,11 @@ namespace MemoryGame.Controllers
             await _highScoreService.DeleteHighScoreAsync(id);
             return Ok();
         }
+
+        [HttpGet("GenerateRandomNumber")]
+        public List<int> GenerateRandomNumberList()
+        {
+            return _highScoreService.GenerateRandomNumberList();
+        }
     }
 }

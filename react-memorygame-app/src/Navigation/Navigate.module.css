@@ -1,0 +1,16 @@
+.navigateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: yellow;
+  grid-area: 1 / 1 / 2 / 6;
+  background-color: rgba(90, 11, 110, 0.7);
+}
+a {
+  color: red;
+  text-decoration: none; /* Ta bort understrykningen */
+  color: inherit; /* Använd den ärvt textfärgen från föräldern */
+  cursor: pointer; /* Ändra markörens utseende till en pekare för att visa att det är klickbart */
+}
