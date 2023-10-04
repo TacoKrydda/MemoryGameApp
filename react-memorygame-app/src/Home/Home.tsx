@@ -1,8 +1,9 @@
 import React from "react";
+import style from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div className="div2">
+    <div className={style.home}>
       <h1>Välkommen!</h1>
       <h2>
         Du börja spela spelet genom att klicka på "Game" i navigeringsfliken som

@@ -12,59 +12,6 @@
   background-size: cover;
 }
 
-.div1 {
-  grid-area: 1 / 1 / 2 / 6;
-  background-color: rgba(90, 11, 110, 0.7);
-}
-.div2 {
-  grid-area: 2 / 2 / 6 / 5;
-  background-color: rgba(6, 6, 24, 0.514);
-  border: 2px solid whitesmoke;
-  color: yellow;
-  border-radius: 10px;
-  padding: 40px;
-  overflow: auto;
-  font-family: Goudy Old Style;
-  text-align: center;
-}
-.div2 h1,
-h2 {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-.div2 h1 {
-  font-size: 60px;
-}
-
-.div3 {
-  grid-area: 2 / 2 / 6 / 5;
-  background-color: rgba(6, 6, 24, 0.514);
-  border: 2px solid rgb(200, 14, 14);
-  color: yellow;
-  border-radius: 10px;
-  padding: 40px;
-  overflow: auto;
-  font-size: 40px;
-  text-align: center;
-}
-
-.div3 h1 {
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-.div4 {
-  grid-area: 2 / 2 / 6 / 5;
-  background-color: rgba(6, 6, 24, 0.514);
-  border: 2px solid rgb(200, 14, 14);
-  color: yellow;
-  border-radius: 10px;
-  padding: 40px;
-  overflow: auto;
-  font-size: 40px;
-  text-align: center;
-}
-
 .bg-default {
   background-image: url(./backgrounds/bgHome.jpg);
 }

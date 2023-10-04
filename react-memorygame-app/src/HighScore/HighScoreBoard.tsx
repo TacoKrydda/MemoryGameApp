@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
-import NavStyle from "./HighScoreBoard.module.css";
+import style from "./HighScoreBoard.module.css";
 
 export interface highScoresProps {
   id: number;
@@ -27,7 +27,7 @@ const HighScoreBoard = () => {
   const highScores = useLoaderData() as highScoresProps[];
   const skipIndex0 = 1;
   return (
-    <div className={NavStyle.div4}>
+    <div className={style.higscoreboard}>
       <table>
         <thead>
           <tr>

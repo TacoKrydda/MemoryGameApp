@@ -1,0 +1,19 @@
+.home {
+  grid-area: 2 / 2 / 6 / 5;
+  background-color: rgba(6, 6, 24, 0.514);
+  border: 2px solid whitesmoke;
+  color: yellow;
+  border-radius: 10px;
+  padding: 40px;
+  overflow: auto;
+  font-family: Goudy Old Style;
+  text-align: center;
+}
+.home h1,
+h2 {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.home h1 {
+  font-size: 60px;
+}
