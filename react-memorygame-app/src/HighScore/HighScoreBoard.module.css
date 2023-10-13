@@ -4,9 +4,35 @@
   border: 2px solid rgb(200, 14, 14);
   color: yellow;
   border-radius: 10px;
-  overflow: auto;
   font-size: 40px;
   text-align: center;
+
+}
+
+.gridHighScore {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.placement {
+  grid-area: 1 / 1 / 2 / 2;
+  word-wrap: break-word;
+}
+.player {
+  word-wrap: break-word;
+  grid-area: 1 / 2 / 2 / 3;
+}
+.score {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.playerPos {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.playerName {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.playerScore {
+  grid-area: 2 / 3 / 3 / 4;
 }

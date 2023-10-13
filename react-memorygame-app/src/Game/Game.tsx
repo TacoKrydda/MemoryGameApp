@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./Game.module.css";
+import { highScoresProps } from "../HighScore/HighScoreBoard";
 
 const Game = () => {
   return (

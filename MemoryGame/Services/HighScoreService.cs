@@ -18,6 +18,18 @@ namespace MemoryGame.Services
             await _highScoreRepository.AddHighScoreAsync(highScore);
         }
 
+        public int CalculateHighScore(int totalAttempts, int ClearTime)
+        {
+            int scoreMultiplier = 100; // Apply a scaling factor of 100, for bigger highscore
+            double inverseAttempts = 1.0 / totalAttempts;
+            double timeScore = ClearTime;
+            double highScore = inverseAttempts * timeScore * scoreMultiplier;
+
+            int roundedScore = (int)Math.Ceiling(highScore);
+
+            return roundedScore;
+        }
+
         public async Task DeleteHighScoreAsync(int id)
         {
             try
@@ -31,9 +43,13 @@ namespace MemoryGame.Services
             }
         }
 
-        public List<int> GenerateRandomNumberList()
+        public List<int> GenerateRandomNumberList(int size)
         {
-            List<int> availableNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            List<int> availableNumbers = new List<int>();
+            for (int i = 1; i <= size; i++)
+            {
+                availableNumbers.Add(i);
+            }
             List<int> randomNumbers = new List<int>(availableNumbers.Count);
             Random random = new Random();
 

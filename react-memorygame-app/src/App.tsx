@@ -3,7 +3,8 @@ import Navigation from "./Navigation/Navigate";
 import Home from "./Home/Home";
 import Game from "./Game/Game";
 import HighScoreBoard, { fetchHighScores } from "./HighScore/HighScoreBoard";
-import Level1 from "./Game/Level1";
+import Level1, { fetchGameNumberSize } from "./Game/Level1";
+import AddNewHighScore from "./HighScore/AddNewHighScore";
 
 import {
   createBrowserRouter,
@@ -29,10 +30,10 @@ function App() {
         <Route
           path="/level1"
           element={<Level1 />}
-          // loader={fetchGameNumbers}
+          loader={fetchGameNumberSize}
           errorElement={<div>Something went wrong!</div>}
         />
-        {/* <Route path="/addnewscore" element={<AddNewScore />} /> */}
+        <Route path="/addnewhighscore" element={<AddNewHighScore />}/>
       </Route>
     )
   );

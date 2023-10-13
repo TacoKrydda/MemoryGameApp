@@ -10,6 +10,7 @@ namespace MemoryGame.Interfaces
         Task AddHighScoreAsync(HighScore highScore);
         Task UpdateHighScoreAsync(HighScore highScore);
         Task DeleteHighScoreAsync(int id);
-        List<int> GenerateRandomNumberList();
+        List<int> GenerateRandomNumberList(int size);
+        int CalculateHighScore(int totalAttempts, int ClearTime);
     }
 }

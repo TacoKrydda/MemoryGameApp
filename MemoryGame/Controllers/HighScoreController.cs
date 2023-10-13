@@ -53,9 +53,14 @@ namespace MemoryGame.Controllers
         }
 
         [HttpGet("GenerateRandomNumber")]
-        public List<int> GenerateRandomNumberList()
+        public List<int> GenerateRandomNumberList(int size)
         {
-            return _highScoreService.GenerateRandomNumberList();
+            return _highScoreService.GenerateRandomNumberList(size);
+        }
+        [HttpGet("CalculateHighScore")]
+        public int CalculateHighScore(int totalAttempts, int ClearTime)
+        {
+            return  _highScoreService.CalculateHighScore(totalAttempts, ClearTime);
         }
     }
 }
