@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import EndMessage from "./EndMessage";
+import gameStyle from "./Game.module.css";
 
 export const fetchGameNumberSize = async () => {
   try {
@@ -80,16 +81,24 @@ const Level1 = () => {
   };
 
   return (
-    <div>
-      <div>
-        <h1>Level 1</h1>
-        <h2>PuzzelList: {puzzelList}</h2>
-        <h2>Timer: {timer}s</h2>
-        <h2>Attempt: {attempt}</h2>
-        {gameOver && (
-          <EndMessage level="level" clear={isUnlocked} gameover={gameOver} />
-        )}
-        {isUnlocked && <h2>Safe Unlocked!</h2>}
+    <div className={gameStyle.level}>
+      <div className={gameStyle.attempts}>
+        <h3>Attempt: {attempt}</h3>
+      </div>
+      <div className={gameStyle.stage}>
+        <h3>Level 1</h3>
+      </div>
+      <div className={gameStyle.timer}>
+        <h3>Timer: {timer}s</h3>
+      </div>
+      <div className={gameStyle.list}>
+        <h3>PuzzelList: {puzzelList}</h3>
+      </div>
+      {/* {gameOver && (
+        <EndMessage level="level" clear={isUnlocked} gameover={gameOver} />
+      )}
+      {isUnlocked && <h2>Safe Unlocked!</h2>} */}
+      <div className={gameStyle.options}>
         {gameNumbers.map((value) => (
           <button
             key={value}

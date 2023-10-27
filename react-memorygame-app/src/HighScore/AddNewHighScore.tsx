@@ -69,7 +69,7 @@ const AddNewHighScore = () => {
   return (
     <div>
       <div>
-        <h2>Score: </h2>
+        <h2>Score: {highScore}</h2>
         <h2>Name: {playerName}</h2>
         <form onSubmit={handleSubmit}>
           <label>
