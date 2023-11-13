@@ -2,6 +2,7 @@ import React, { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
 import { CalculateScore } from "./Calculate";
+import addScoreStyle from "./AddNewHighScore.module.css";
 
 interface HighScoreProps {
   id: number;
@@ -67,10 +68,20 @@ const AddNewHighScore = () => {
   console.log(newScore);
 
   return (
-    <div>
-      <div>
-        <h2>Score: {highScore}</h2>
-        <h2>Name: {playerName}</h2>
+    <div className={addScoreStyle.addScoreContainer}>
+      <div className={addScoreStyle.scoreText}>
+        <h2>Score:</h2>
+      </div>
+      <div className={addScoreStyle.scorePoints}>
+        <h2>{highScore}</h2>
+      </div>
+      <div className={addScoreStyle.nameText}>
+        <h2>Name:</h2>
+      </div>
+      <div className={addScoreStyle.nameUsed}>
+        <h2>{playerName}</h2>
+      </div>
+      <div className={addScoreStyle.addScoreForm}>
         <form onSubmit={handleSubmit}>
           <label>
             <h2>Add Your Player Name</h2>
