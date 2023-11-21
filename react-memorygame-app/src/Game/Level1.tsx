@@ -49,9 +49,9 @@ const Level1 = () => {
 
   useEffect(() => {
     if (isUnlocked) {
-      navigate("/addnewhighscore", {
-        state: { attempt, timer },
-      });
+      // navigate("/addnewhighscore", {
+      //   state: { attempt, timer },
+      // });
     }
   }, [isUnlocked, attempt, timer, navigate]);
 
@@ -80,36 +80,55 @@ const Level1 = () => {
     }, 300);
   };
 
+  const handleButtonContinue = () => {
+    navigate("/addnewhighscore", {
+      state: { attempt, timer },
+    });
+  };
+
   return (
-    <div className={gameStyle.level}>
-      <div className={gameStyle.attempts}>
-        <h3>Attempt: {attempt}</h3>
-      </div>
-      <div className={gameStyle.stage}>
-        <h3>Level 1</h3>
-      </div>
-      <div className={gameStyle.timer}>
-        <h3>Timer: {timer}s</h3>
-      </div>
-      <div className={gameStyle.list}>
-        <h3>PuzzelList: {puzzelList}</h3>
-      </div>
+    <>
+      {!isUnlocked && (
+        <div className={gameStyle.level}>
+          <div className={gameStyle.attempts}>
+            <h3>Attempt: {attempt}</h3>
+          </div>
+          <div className={gameStyle.stage}>
+            <h3>Level 1</h3>
+          </div>
+          <div className={gameStyle.timer}>
+            <h3>Timer: {timer}s</h3>
+          </div>
+          <div className={gameStyle.list}>
+            <h3>PuzzelList: {puzzelList}</h3>
+          </div>
+          <div className={gameStyle.options}>
+            {gameNumbers.map((value) => (
+              <button
+                key={value}
+                onClick={() => handleButtonPress(value)}
+                disabled={buttonDisabled}
+              >
+                {value} easy mode here!
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
       {/* {gameOver && (
         <EndMessage level="level" clear={isUnlocked} gameover={gameOver} />
+      )} */}
+      {isUnlocked && (
+        <div className={gameStyle.finish}>
+          <div className={gameStyle.textfinish}>
+            <h2>Level Completed!</h2>
+          </div>
+          <div className={gameStyle.buttonfinish}>
+            <button onClick={() => handleButtonContinue()}>Continue </button>
+          </div>
+        </div>
       )}
-      {isUnlocked && <h2>Safe Unlocked!</h2>} */}
-      <div className={gameStyle.options}>
-        {gameNumbers.map((value) => (
-          <button
-            key={value}
-            onClick={() => handleButtonPress(value)}
-            disabled={buttonDisabled}
-          >
-            {value} easy mode here!
-          </button>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
