@@ -16,7 +16,7 @@ const AddNewHighScore = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [playerName, setPlayerName] = useState("");
+  const [playerName, setPlayerName] = useState("Player Name");
   const { attempt, timer } = location.state;
   const [highScore, setScore] = useState(0);
   const [newScore, setNewScore] = useState<Partial<HighScoreProps>>({});

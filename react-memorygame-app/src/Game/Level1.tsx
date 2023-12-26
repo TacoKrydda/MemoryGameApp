@@ -3,7 +3,7 @@ import axios from "axios";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import EndMessage from "./EndMessage";
 import gameStyle from "./Game.module.css";
-
+import clipp from "../backgrounds/videoplayback.mp4";
 export const fetchGameNumberSize = async () => {
   try {
     const response = await axios.get(
@@ -88,6 +88,11 @@ const Level1 = () => {
 
   return (
     <>
+      <div className={gameStyle.bgstage}>
+        <video autoPlay loop muted>
+          <source src={clipp} type="video/mp4" />
+        </video>
+      </div>
       {!isUnlocked && (
         <div className={gameStyle.level}>
           <div className={gameStyle.attempts}>

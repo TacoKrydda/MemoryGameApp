@@ -5,6 +5,7 @@ import Game from "./Game/Game";
 import HighScoreBoard, { fetchHighScores } from "./HighScore/HighScoreBoard";
 import Level1, { fetchGameNumberSize } from "./Game/Level1";
 import AddNewHighScore from "./HighScore/AddNewHighScore";
+import VideoTest from "./videoTest";
 
 import {
   createBrowserRouter,
@@ -33,14 +34,12 @@ function App() {
           loader={fetchGameNumberSize}
           errorElement={<div>Something went wrong!</div>}
         />
-        <Route path="/addnewhighscore" element={<AddNewHighScore />}/>
+        <Route path="/addnewhighscore" element={<AddNewHighScore />} />
       </Route>
     )
   );
 
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 const Root = () => {
   const location = useLocation();
@@ -56,7 +55,7 @@ const Root = () => {
       backgroundClass = "bg-highscore";
       break;
     case "/level1":
-      backgroundClass = "bg-level1";
+      // backgroundClass = "bg-level1";
       break;
     default:
       break;

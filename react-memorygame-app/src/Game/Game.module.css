@@ -76,3 +76,17 @@
 .buttonfinish {
   grid-area: 5 / 3 / 6 / 4;
 }
+
+.bgstage {
+  position: absolute;
+  /* background-image: url(../backgrounds/bgGame.jpg); */
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+}
+.bgstage video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
