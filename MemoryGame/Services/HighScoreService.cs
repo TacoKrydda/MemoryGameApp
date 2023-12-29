@@ -20,7 +20,7 @@ namespace MemoryGame.Services
 
         public int CalculateHighScore(int totalAttempts, int ClearTime)
         {
-            int scoreMultiplier = 100; // Apply a scaling factor of 100, for bigger highscore
+            int scoreMultiplier = 100; // Apply a scaling factor of 100, bigger highscore = more fun
             double inverseAttempts = 1.0 / totalAttempts;
             double timeScore = ClearTime;
             double highScore = inverseAttempts * timeScore * scoreMultiplier;
