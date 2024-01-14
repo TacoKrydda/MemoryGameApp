@@ -126,7 +126,7 @@ const Level1 = () => {
       {isUnlocked && (
         <div className={gameStyle.finish}>
           <div className={gameStyle.textfinish}>
-            <h2>Level Completed!</h2>
+            <h2>Level Completed!!!</h2>
           </div>
           <div className={gameStyle.buttonfinish}>
             <button onClick={() => handleButtonContinue()}>Continue </button>
